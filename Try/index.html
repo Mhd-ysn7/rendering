@@ -1,0 +1,15 @@
+<ul id="students_ul"></ul>
+
+<script src="//code.tidio.co/wvcxk90nxdoiyfbiunhzzmj4kzaq04c5.js" async></script>
+<script>
+    var ul=document.getElementById("students_ul")
+    fetch("https://rendering-ohmb.onrender.com/students")
+    .then(response => response.json())
+    .then(json => (
+        json.forEach(student => {
+            let li =document.createElement("li")
+            li.innerHTML=student.name;
+            ul.appendChild(li)
+        })
+    ))
+</script>
